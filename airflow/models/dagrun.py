@@ -165,7 +165,7 @@ class DagRun(Base, LoggingMixin):
     )
 
     task_instances = relationship(
-        TI, back_populates="dag_run", cascade="save-update, merge, delete, delete-orphan"
+        TI, back_populates="dag_run", cascade="save-update, merge, delete-orphan"
     )
     dag_model = relationship(
         "DagModel",

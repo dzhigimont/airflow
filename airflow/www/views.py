@@ -4996,7 +4996,7 @@ class DagRunModelView(AirflowPrivilegeVerifierModelView):
 
     route_base = "/dagrun"
 
-    datamodel = AirflowModelView.CustomSQLAInterface(models.DagRun)  # type: ignore
+    datamodel = wwwutils.DagRunCustomSQLAInterface(models.DagRun)  # type: ignore
 
     class_permission_name = permissions.RESOURCE_DAG_RUN
     method_permission_name = {
